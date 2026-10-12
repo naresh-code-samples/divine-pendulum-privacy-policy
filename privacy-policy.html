@@ -8,39 +8,70 @@
   body { font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
   h1 { color: #8a4b00; margin-bottom: 0.2em; }
   h2 { color: #5a3200; margin-top: 1.6em; font-size: 1.15em; }
+  h3 { color: #5a3200; font-size: 1.02em; margin-bottom: 0.2em; }
   .muted { color: #666; font-size: 0.95em; }
   code { background: #f4efe6; padding: 1px 5px; border-radius: 4px; }
 </style>
 </head>
 <body>
 <h1>Divine Pendulum: Privacy Policy</h1>
-<p class="muted">Effective date: 9 October 2026 &middot; Applies to Divine Pendulum for Windows (Microsoft Store), version 1.3 and later.<br>Publisher: Nareshkumar D</p>
+<p class="muted">Effective date: 10 October 2026 (updated for Android 1.0.2) &middot; Applies to Divine Pendulum for Windows (Microsoft Store, version 1.3 and later)
+and Divine Pendulum for Android (Google Play, version 1.0 and later).<br>Publisher: Nareshkumar D</p>
 
 <h2>Summary</h2>
 <p><strong>Divine Pendulum does not collect, store on any server, sell or share any personal data.</strong>
-It works fully offline and has no accounts, no advertising, no analytics and no tracking.</p>
+It works fully offline and has no accounts, no advertising, no analytics and no tracking.
+The Android app does not even request the internet permission.</p>
 
 <h2>What the app stores, and where</h2>
-<p>Only your preferences stay <em>on your own PC</em>, in the app's private local data folder
+<p>Only your preferences stay on your own device, in the app's private storage
 (for example: the chosen deity, pendulum size and position, swing and glow options, water-reminder settings
-and today's glass count). If something goes wrong, the app may also write a small error log to that folder.
+and today's glass count). On Windows the app may also write a small diagnostic log to that folder.
 None of this is ever sent anywhere.</p>
-<p>Pictures you add with "Add your own images…" stay in a folder on your PC. The app only reads them
-to show them on the pendulum. It never uploads or shares them.</p>
-<p>When you uninstall the app, Windows deletes this local data folder.</p>
+<p>Pictures you add yourself stay on your device and are only used to show them on the pendulum:</p>
+<ul>
+  <li><strong>Windows:</strong> pictures you put in the folder opened by &ldquo;Add your own images&hellip;&rdquo;.</li>
+  <li><strong>Android:</strong> a photo you pick with &ldquo;Add your own photo&rdquo;.
+  Android's photo picker gives the app only the single picture you choose (the app has no access to the rest of your gallery).
+  The app saves a framed copy in its private storage. It never uploads or shares it.</li>
+</ul>
+<p>The Android app turns off Android cloud backup and device-to-device transfer for its data, so your settings and photos
+are not copied to Google servers. When you uninstall the app, Windows or Android deletes all of its data.</p>
 
 <h2>Internet use</h2>
-<p>The app does not connect to the internet itself. Buying the app, the free trial and licensing are handled
+<p>The app does not connect to the internet itself. On Windows, buying the app, the free trial and licensing are handled
 by Microsoft through the Microsoft Store, under
 <a href="https://privacy.microsoft.com/privacystatement">Microsoft's Privacy Statement</a>.
-The developer gets only the anonymous, aggregated sales and install reports that Microsoft Partner Center
-gives every developer, and never your name, e-mail or payment details.</p>
+On Android, downloads and updates are handled by Google Play, under
+<a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.
+The developer gets only the anonymous, aggregated install and sales reports that Microsoft Partner Center and Google Play
+Console give every developer, and never your name, e-mail or payment details.</p>
 
 <h2>Permissions</h2>
+<h3>Windows</h3>
 <p>Like every desktop app, Divine Pendulum runs as a normal (full-trust) Windows program. It doesn't use your camera,
 microphone, location, contacts or any other personal information.
-"Run at Windows startup" is off until you turn it on, and you can turn it off at any time in the app
+&ldquo;Run at Windows startup&rdquo; is off until you turn it on, and you can turn it off at any time in the app
 or in Windows Settings &gt; Apps &gt; Startup.</p>
+<h3>Android</h3>
+<ul>
+  <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>): only to show the water reminder you switch on,
+  and the small status notification of the floating pendulum.</li>
+  <li><strong>Display over other apps</strong> (<code>SYSTEM_ALERT_WINDOW</code>): only if you start the
+  &ldquo;floating pendulum&rdquo;, to draw the pendulum on top of other apps. The app cannot see, read or record
+  what other apps show, and touches outside the pendulum go to your other apps as usual.</li>
+  <li><strong>Foreground service</strong>: keeps the floating pendulum on screen while you use it; it stops when you tap
+  &ldquo;Stop&rdquo; in its notification or in the app.</li>
+  <li><strong>Alarms &amp; reminders</strong> (<code>SCHEDULE_EXACT_ALARM</code>, only if you allow it) and
+  <strong>full-screen notifications</strong> (<code>USE_FULL_SCREEN_INTENT</code>): only so the water reminder you switched on
+  arrives on time while the phone is locked and can show a &ldquo;Did you drink water?&rdquo; screen with Yes / Later buttons
+  over the lock screen. <strong>Vibration</strong> is used only for that reminder.</li>
+  <li><strong>Run at startup</strong> (<code>RECEIVE_BOOT_COMPLETED</code>): only to set the next water reminder again
+  after the phone restarts.</li>
+  <li><strong>Motion sensor</strong> (accelerometer, no permission needed): only when you turn on &ldquo;Tilt with phone&rdquo;,
+  to let the pendulum hang with gravity. Sensor readings are used instantly and never stored.</li>
+</ul>
+<p>The Android app does not use the camera, microphone, location, contacts, accounts, advertising ID or internet.</p>
 
 <h2>Children</h2>
 <p>The app collects no personal information from anyone, including children under 13.</p>
